@@ -1,0 +1,19 @@
+Azure DevOps provides development collaboration tools including high-performance pipelines, free private Git repositories,
+configurable Kanban boards, and extensive automated and continuous testing capabilities. 
+You can access these tools through our cloud service, Azure DevOps Services, or on-premises platform, Azure DevOps Server 
+
+Azure DevOps includes(PBART):
+1. Azure Pipelines
+CI/CD that works with any language, platform, and cloud. Connect to GitHub or any Git repository and deploy continuously.
+Azure Pipelines helps you implement a build, test, and deployment pipeline for any app.
+
+2. Azure Boards
+Powerful work tracking with Kanban boards, backlogs, team dashboards, and custom reporting.
+
+3. Azure Artifacts
+Maven, npm, and NuGet package feeds from public and private sources. 
+
+4. Azure Repos
+
+5. Azure Test Plans
+
