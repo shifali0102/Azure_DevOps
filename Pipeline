@@ -1,0 +1,54 @@
+Navigate to the Pipelines page in Azure Pipelines and select the pipeline you created.
+
+This pipeline runs whenever your team pushes a change to the master branch of your repo. It runs on a Microsoft-hosted Linux machine.
+The pipeline process has a single step, which is to run the Maven task.
+
+Change the platform to build on
+pool:
+  vmImage: "vs2017-win2016"
+Add steps
+You can add additional scripts or tasks as steps to your pipeline. 
+
+You can use tasks for building, testing, publishing, or deploying your app. For Java, the Maven task we used handles testing and
+publishing results, however, you can use a task to publish code coverage results too.
+
+THING 1:
+
+- task: PublishCodeCoverageResults@1
+  inputs:
+    codeCoverageTool: "JaCoCo"
+    summaryFileLocation: "$(System.DefaultWorkingDirectory)/**/site/jacoco/jacoco.xml"
+    reportDirectory: "$(System.DefaultWorkingDirectory)/**/site/jacoco"
+    failIfCoverageEmpty: true
+    
+You can view your test and code coverage results by selecting your build and going to the Test and Coverage tabs.
+
+THING 2:
+
+You can build and test your project on multiple platforms.
+
+One way to do it is with strategy and matrix. You can use variables to conveniently put data into various parts of a pipeline
+
+strategy:
+  matrix:
+    linux:
+      imageName: "ubuntu-16.04"
+    mac:
+      imageName: "macos-10.13"
+    windows:
+      imageName: "vs2017-win2016"
+  maxParallel: 3
+
+pool:
+  vmImage: $(imageName)
+  
+  THING 3:
+  confirm the changes to see your build run three jobs on three different platforms.
+  Each agent can run only one job at a time. To run multiple jobs in parallel you must configure multiple agents.
+  
+  
+  Build using multiple versions
+  
+  
+  
+  
