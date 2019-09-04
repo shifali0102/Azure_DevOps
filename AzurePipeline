@@ -1,0 +1,25 @@
+Azure Pipelines is a cloud service that you can use to automatically build and test your code project and make it available to other users.
+It works with just about any language or project type.
+Azure Pipelines combines continuous integration (CI) and continuous delivery (CD) to constantly and consistently test and build your code and ship it to any target.
+
+Languages
+You can use many languages with Azure Pipelines, such as Python, Java, JavaScript, PHP, Ruby, C#, C++, and Go.
+
+Application types
+You can use Azure Pipelines with most application types, such as Java, JavaScript, Node.js, Python, .NET, C++, Go, PHP, and XCode.
+
+Deployment targets
+Use Azure Pipelines to deploy your code to multiple targets. Targets include container registries, virtual machines, Azure services, 
+or any on-premises or cloud target.
+
+Package formats
+To produce packages that can be consumed by others, you can publish NuGet, npm, or Maven packages to the built-in package management repository in Azure Pipelines.
+You also can use any other package management repository of your choice.
+
+The basic steps are these:
+
+1.Configure Azure Pipelines to use your Git repo.
+2.Edit your azure-pipelines.yml file to define your build.
+3.Push your code to your version control repository. This action kicks off the default trigger to build and deploy and
+then monitor the results.
+4.Your code is now updated, built, tested, and packaged. It can be deployed to any target.
