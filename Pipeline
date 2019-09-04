@@ -49,6 +49,32 @@ pool:
   
   Build using multiple versions
   
+  THING 3:
+  Customize CI triggers
+  
+  You can use a trigger: to specify the events when you want to run the pipeline. YAML pipelines are configured by default with a
+  CI trigger on your default branch (which is usually master). You can set up triggers for specific branches or for pull request
+  validation. For a pull request validation trigger just replace the trigger: step with pr: as shown in the two examples below.
+  
+  
+  trigger:
+  - master
+  - releases/*
+  
+  pr:
+  - master
+  - releases/*
+  
+  pr: PULL REQUEST
+  
+  Pull requests let you tell others about changes you've pushed to a GitHub repository. Once a pull request is sent, 
+  interested parties can review the set of changes, discuss potential modifications, and even push follow-up commits if necessary.
+  Many open source projects on Github use pull requests to manage changes from contributors as they are useful in providing a way to
+  notify project maintainers about changes one has made and in initiating code review and general discussion about a set of changes 
+  before being merged into the main branch.
+  
+  
+  
   
   
   
