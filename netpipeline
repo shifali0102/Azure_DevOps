@@ -1,0 +1,17 @@
+NuGet
+is a free and open-source package manager designed for the Microsoft development platform (formerly known as NuPack).
+Since its introduction in 2010, NuGet has evolved into a larger ecosystem of tools and services.
+
+A package manager or package-management system is a collection of software tools that automates the process of installing, 
+upgrading, configuring, and removing computer programs for a computer's operating system in a consistent manner.
+
+NuGet is a popular way to depend on code that you don't build. You can download NuGet packages by running the dotnet
+restore command either through the .NET Core task or directly in a script in your pipeline.
+
+dotnet restore internally uses a version of NuGet.exe that is packaged with the .NET Core SDK.
+dotnet restore can only restore packages specified in the .NET Core project .csproj files. If you also have a
+Microsoft .NET Framework project in your solution or use package.json to specify your dependencies, you must also use the 
+NuGet task to restore those dependencies.
+In .NET Core SDK version 2.0 and newer, packages are restored automatically when running other commands such as dotnet build. 
+However, you might still need to use the .NET Core task to restore packages if you use an authenticated feed.
+
