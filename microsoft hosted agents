@@ -1,0 +1,19 @@
+https://docs.microsoft.com/en-us/azure/devops/pipelines/agents/hosted?view=azure-devops
+
+If your pipelines are in Azure Pipelines, then you've got a convenient option to run your jobs using a Microsoft-hosted agent.
+With Microsoft-hosted agents, maintenance and upgrades are taken care of for you. Each time you run a pipeline, you get a
+fresh virtual machine.The virtual machine is discarded after one use.
+
+For many teams this is the simplest way to run your jobs. You can try it first and see if it works for your build or deployment.
+If not, you can use a self-hosted agent.
+
+Microsoft-hosted agent pools offer 7 virtual machine images to choose from, each including a broad range of tools and software:
+Have the above software. You can also add software during your build or release using tool installer tasks.
+
+Microsoft-hosted agents do not offer:
+
+1. The ability to sign in.
+2. The ability to drop artifacts to a UNC file share.
+3. The ability to run XAML builds.
+4. Potential performance advantages that you might get by using self-hosted agents which might start and run builds faster.
+If Microsoft-hosted agents don't meet your needs, then you can deploy your own self-hosted agents.
